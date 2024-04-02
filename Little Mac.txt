@@ -1,0 +1,63 @@
+#include <iostream>
+
+//Optional: Little Mac is an interplanetary space boxer, who is trying to win championship belts for various weight categories on other planets within the solar system.
+
+//Write a space.cpp program that helps him keep track of his target weight by:
+
+//It should ask him what his earth weight is.
+
+//Ask him to enter a number for the planet he wants to fight on.
+
+//It should then compute his weight on the destination planet.
+
+int main() {
+  double gravity;
+  double planetweight;
+  double earthweight;
+  std::string planet;
+  int planetNum;
+
+  std::cout<<"Enter your weight:\n";
+  std::cin>>earthweight;
+  std::cout<<"Enter your planet number:\n";
+  std::cin>>planetNum;
+
+ switch(planetNum){
+    case 1:
+    planet = "Mercury";
+    gravity = 0.38;
+    break;
+    case 2:
+    planet = "Venus";
+    gravity = 0.91;
+    break;
+    case 3:
+    planet = "Mars";
+    gravity = 0.38;
+    break;
+    case 4:
+    planet = "Jupiter";
+    gravity = 2.34;
+    break;
+    case 5:
+    planet = "Saturn";
+    gravity = 1.06;
+    break;
+    case 6:
+    planet = "Uranus";
+    gravity = 0.92;
+    break;
+    case 7:
+    planet = "Neptune";
+    gravity = 1.19;
+    break;
+    default:
+    std::cout<<"Invalid\n";
+    break;
+  }
+
+ planetweight = earthweight * gravity;
+
+std::cout<<"If you weigh "<<earthweight<<" pounds"<<", your weight on "<<planet<<" is "<<planetweight<<" pounds.";
+
+}
